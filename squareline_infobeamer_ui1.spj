@@ -4912,7 +4912,7 @@
     {
       "propertyAnimations": [
         {
-          "Path": 3,
+          "Path": 2,
           "KeyFrames": [
             {
               "Value": 160,
@@ -4989,7 +4989,7 @@
             {
               "nid": 1000778,
               "strtype": "PROPERTYANIMATION/Path",
-              "strval": "ease_in_out",
+              "strval": "ease_out",
               "InheritedType": 3
             },
             {
@@ -5060,7 +5060,7 @@
           "InheritedType": 1
         },
         {
-          "Path": 2,
+          "Path": 3,
           "KeyFrames": [
             {
               "Value": 220,
@@ -5138,7 +5138,7 @@
             {
               "nid": 1000798,
               "strtype": "PROPERTYANIMATION/Path",
-              "strval": "ease_out",
+              "strval": "ease_in_out",
               "InheritedType": 3
             },
             {
@@ -5835,7 +5835,7 @@
     "uiExportFolderPath": "C:\\Dev\\MCU\\BSK-InfoBeamerHW-UI-COPO\\lib\\ui\\src",
     "projectExportFolderPath": "C:\\Users\\Florian\\SquareLine\\infobeamer_ui",
     "custom_variable_prefix": "uic",
-    "backup_cnt": 142,
+    "backup_cnt": 143,
     "autosave_cnt": 0,
     "group_color_cnt": 0,
     "lvgl_version": "8.3.11",
