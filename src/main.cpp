@@ -277,7 +277,7 @@ void screenchanged() {
 
     if (currentScreen == SCREEN_ValueSet_ADRSET_SAFETY) {
 
-        lv_label_set_text(ui_lbadrsetheader1,"DMX Safety Channel:");
+        lv_label_set_text(ui_lbadrsetheader1,"DMX Trigger Channel:");
         
         lv_spinbox_set_digit_format(ui_Spinbox1,3,0);
         lv_spinbox_set_range(ui_Spinbox1,1,512);
@@ -289,7 +289,7 @@ void screenchanged() {
 
 
     if (currentScreen == SCREEN_ValueSet_ADRSET_FIRE ){
-        lv_label_set_text(ui_lbadrsetheader1,"DMX Fire Channel:");
+        lv_label_set_text(ui_lbadrsetheader1,"DMX Select Channel:");
         lv_spinbox_set_digit_format(ui_Spinbox1,3,0);
         lv_spinbox_set_range(ui_Spinbox1,1,512);
         lv_group_add_obj(g, ui_Spinbox1);
