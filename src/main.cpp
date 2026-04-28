@@ -300,7 +300,7 @@ void screenchanged() {
 
 
     if(currentScreen == SCREEN_ValueSet_Co2Weight){
-    lv_label_set_text(ui_lbadrsetheader1,"Set Co2 Rate kg/s:");
+    lv_label_set_text(ui_lbadrsetheader1,"Set Delay in ms:");
    // lv_group_add_obj(g, ui_btnsetvalueback);
     lv_spinbox_set_digit_format(ui_Spinbox1,4,3);
     lv_spinbox_set_range(ui_Spinbox1,0,500);
