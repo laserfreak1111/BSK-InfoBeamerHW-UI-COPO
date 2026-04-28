@@ -185,6 +185,7 @@ snprintf(ip_line, sizeof(ip_line), "IP: %s", status_network_ip);
 roller_add_line(ip_line);
 
 // Dynamischer Eintrag: Temperatur
+status_cputemp =  temperatureRead();
 float temp = status_cputemp;
 char line[64];
 snprintf(line, sizeof(line), "CPU-TEMP: %.1f °C", temp);
@@ -202,9 +203,9 @@ void updateco2usage()
 {
     char buf[16];  // Genug Puffer für Zahl + Nullterminator
   /*Use the user_data*/
-  snprintf(buf, sizeof(buf), "%.0f kg", status_co2usage);
+  snprintf(buf, sizeof(buf), "%.0f ms", status_co2usage);
 
-  lv_label_set_text(ui_lbco2saved,buf);
+ //lv_label_set_text(ui_lbco2saved,buf);
 
 
  
@@ -216,11 +217,11 @@ void updatehomescreenadr(){
 
 
 
-        char buffer[10]; // Puffer für den Text
-        snprintf(buffer, sizeof(buffer), "%d", val_dmx_fire_adr);
-        lv_label_set_text(ui_lbfireadr, buffer);
-        snprintf(buffer, sizeof(buffer), "%d", val_dmx_safety_adr);
-        lv_label_set_text(ui_lbsafeadr, buffer); 
+      //  char buffer[10]; // Puffer für den Text
+      //  snprintf(buffer, sizeof(buffer), "%d", val_dmx_fire_adr);
+      //  lv_label_set_text(ui_lbfireadr, buffer);
+      //  snprintf(buffer, sizeof(buffer), "%d", val_dmx_safety_adr);
+       // lv_label_set_text(ui_lbsafeadr, buffer); 
 
 }
 
@@ -445,7 +446,7 @@ void update_loading_label() {
     } while (is_recent(idx));
 
     add_to_history(idx);
-    lv_label_set_text(uic_lbstart, loading_texts[idx]);
+   // lv_label_set_text(uic_lbstart, loading_texts[idx]);
 }
 
 void setup() {
@@ -466,7 +467,7 @@ void setup() {
         //Set PWM Screen Brightness
       ledcSetup(0, 5000, 8);
       ledcAttachPin(15, 0);
-      ledcWrite(0, 120);
+      ledcWrite(0, 80);
  
 
     // Update Embed initialization parameters
@@ -553,15 +554,15 @@ void slowtimer(){
         if (now - last_update_statusupdates >=500) {
 
             if(status_dmx_ok){
-        lv_img_set_src(ui_imgdmx, &ui_img_dmxicon_en_png);   
+       // lv_img_set_src(ui_imgdmx, &ui_img_dmxicon_en_png);   
             }else{
-         lv_img_set_src(ui_imgdmx, &ui_img_dmxicon_di_png);   
+       //  lv_img_set_src(ui_imgdmx, &ui_img_dmxicon_di_png);   
             }
  
       if(status_network_ok){
-        lv_img_set_src(ui_imgeth, &ui_img_1667256483);   
+       // lv_img_set_src(ui_imgeth, &ui_img_1667256483);   
             }else{
-         lv_img_set_src(ui_imgeth, &ui_img_1748321345);   
+       //  lv_img_set_src(ui_imgeth, &ui_img_1748321345);   
             }
 
 /*   if(heartbeat_lost){
@@ -572,15 +573,15 @@ void slowtimer(){
  */
 
             if(status_safety_on){
-             lv_obj_set_style_bg_color(ui_consafe, lv_color_hex(0xFFD900), LV_PART_MAIN | LV_STATE_DEFAULT); //gelb
+           //  lv_obj_set_style_bg_color(ui_consafe, lv_color_hex(0xFFD900), LV_PART_MAIN | LV_STATE_DEFAULT); //gelb
             }else{
-            lv_obj_set_style_bg_color(ui_consafe, lv_color_hex(0x303030), LV_PART_MAIN | LV_STATE_DEFAULT); //grau
+           // lv_obj_set_style_bg_color(ui_consafe, lv_color_hex(0x303030), LV_PART_MAIN | LV_STATE_DEFAULT); //grau
             }
 
   if(status_fire_on){
-             lv_obj_set_style_bg_color(ui_confire, lv_color_hex(0xC80000), LV_PART_MAIN | LV_STATE_DEFAULT); //rot
+          //   lv_obj_set_style_bg_color(ui_confire, lv_color_hex(0xC80000), LV_PART_MAIN | LV_STATE_DEFAULT); //rot
             }else{
-            lv_obj_set_style_bg_color(ui_confire, lv_color_hex(0x303030), LV_PART_MAIN | LV_STATE_DEFAULT); //grau
+         //   lv_obj_set_style_bg_color(ui_confire, lv_color_hex(0x303030), LV_PART_MAIN | LV_STATE_DEFAULT); //grau
             }
 
             last_update_statusupdates = now;

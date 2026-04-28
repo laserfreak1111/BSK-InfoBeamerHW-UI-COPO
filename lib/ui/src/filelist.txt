@@ -13,9 +13,4 @@ ui.c
 ui_comp_hook.c
 ui_helpers.c
 ui_img_bskklein_png.c
-ui_img_fog_png.c
-ui_img_dmxicon_en_png.c
-ui_img_1748321345.c
-ui_img_95950_png.c
-ui_img_dmxicon_di_png.c
-ui_img_1667256483.c
+ui_img_bg_png.c

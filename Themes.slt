@@ -8,7 +8,7 @@
         "strval": "bskorange",
         "intarray": [
           255,
-          125,
+          59,
           0,
           255
         ],
@@ -19,9 +19,9 @@
         "strtype": "THEME_COLOR",
         "strval": "bskgrey",
         "intarray": [
-          31,
-          31,
-          31,
+          0,
+          0,
+          0,
           255
         ],
         "InheritedType": 0
