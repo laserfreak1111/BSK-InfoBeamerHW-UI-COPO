@@ -6,6 +6,7 @@
 #include "ui.h"
 
 lv_obj_t * ui_splash = NULL;
+lv_obj_t * ui_Panel1 = NULL;
 lv_obj_t * ui_Image3 = NULL;
 lv_obj_t * ui_Label1 = NULL;
 lv_obj_t * ui_Label2 = NULL;
@@ -29,6 +30,20 @@ void ui_splash_screen_init(void)
     lv_obj_clear_flag(ui_splash, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
     lv_obj_set_style_bg_color(ui_splash, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui_splash, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+
+    ui_Panel1 = lv_obj_create(ui_splash);
+    lv_obj_set_width(ui_Panel1, 296);
+    lv_obj_set_height(ui_Panel1, 147);
+    lv_obj_set_x(ui_Panel1, 5);
+    lv_obj_set_y(ui_Panel1, 11);
+    lv_obj_clear_flag(ui_Panel1, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_Panel1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui_Panel1, lv_color_hex(0xFFFFFF), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_Panel1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_outline_color(ui_Panel1, lv_color_hex(0xFF3B00), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_outline_opa(ui_Panel1, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_outline_width(ui_Panel1, 2, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_outline_pad(ui_Panel1, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_Image3 = lv_img_create(ui_splash);
     lv_img_set_src(ui_Image3, &ui_img_bskklein_png);
@@ -55,7 +70,7 @@ void ui_splash_screen_init(void)
     ui_Label2 = lv_label_create(ui_splash);
     lv_obj_set_width(ui_Label2, 251);
     lv_obj_set_height(ui_Label2, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label2, -1);
+    lv_obj_set_x(ui_Label2, -6);
     lv_obj_set_y(ui_Label2, 34);
     lv_obj_set_align(ui_Label2, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label2, "RENTAL UNIT\n NOT FOR SALE");
@@ -80,6 +95,7 @@ void ui_splash_screen_destroy(void)
 
     // NULL screen variables
     ui_splash = NULL;
+    ui_Panel1 = NULL;
     ui_Image3 = NULL;
     ui_Label1 = NULL;
     ui_Label2 = NULL;

@@ -20,10 +20,11 @@ void ui_dmxmenu_screen_init(void)
 
     ui_rollerdmxmenu = lv_roller_create(ui_dmxmenu);
     lv_roller_set_options(ui_rollerdmxmenu, "DMX Trigger Channel\nDMX Select Channel\n< Exit", LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_rollerdmxmenu, 304);
+    lv_obj_set_width(ui_rollerdmxmenu, 296);
     lv_obj_set_height(ui_rollerdmxmenu, 152);
-    lv_obj_set_x(ui_rollerdmxmenu, 0);
+    lv_obj_set_x(ui_rollerdmxmenu, -6);
     lv_obj_set_y(ui_rollerdmxmenu, 11);
+    lv_obj_set_align(ui_rollerdmxmenu, LV_ALIGN_CENTER);
     lv_obj_add_state(ui_rollerdmxmenu, LV_STATE_EDITED);       /// States
     lv_obj_add_flag(ui_rollerdmxmenu, LV_OBJ_FLAG_SCROLL_ON_FOCUS | LV_OBJ_FLAG_SCROLL_WITH_ARROW);     /// Flags
     lv_obj_set_style_text_color(ui_rollerdmxmenu, lv_color_hex(0x808080), LV_PART_MAIN | LV_STATE_DEFAULT);

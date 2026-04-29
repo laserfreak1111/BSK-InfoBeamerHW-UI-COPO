@@ -23,10 +23,11 @@ void ui_mainmenu_screen_init(void)
     lv_roller_set_options(ui_rollermainmenu,
                           "DMX Settings\nNetwork Settings\nAudio\nDevice Information\nDevice Status\nExit", LV_ROLLER_MODE_NORMAL);
     lv_roller_set_selected(ui_rollermainmenu, 4, LV_ANIM_OFF);
-    lv_obj_set_width(ui_rollermainmenu, 304);
+    lv_obj_set_width(ui_rollermainmenu, 296);
     lv_obj_set_height(ui_rollermainmenu, 152);
-    lv_obj_set_x(ui_rollermainmenu, 0);
+    lv_obj_set_x(ui_rollermainmenu, -6);
     lv_obj_set_y(ui_rollermainmenu, 11);
+    lv_obj_set_align(ui_rollermainmenu, LV_ALIGN_CENTER);
     lv_obj_add_state(ui_rollermainmenu, LV_STATE_EDITED);       /// States
     lv_obj_add_flag(ui_rollermainmenu, LV_OBJ_FLAG_SCROLL_ON_FOCUS | LV_OBJ_FLAG_SCROLL_WITH_ARROW);     /// Flags
     lv_obj_set_style_text_color(ui_rollermainmenu, lv_color_hex(0x808080), LV_PART_MAIN | LV_STATE_DEFAULT);

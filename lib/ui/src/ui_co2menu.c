@@ -20,10 +20,11 @@ void ui_co2menu_screen_init(void)
 
     ui_rollerco2settings = lv_roller_create(ui_co2menu);
     lv_roller_set_options(ui_rollerco2settings, "Audio Delay (ms)\nReset  (Hold)\n< Exit", LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_rollerco2settings, 304);
+    lv_obj_set_width(ui_rollerco2settings, 296);
     lv_obj_set_height(ui_rollerco2settings, 152);
-    lv_obj_set_x(ui_rollerco2settings, 0);
+    lv_obj_set_x(ui_rollerco2settings, -6);
     lv_obj_set_y(ui_rollerco2settings, 11);
+    lv_obj_set_align(ui_rollerco2settings, LV_ALIGN_CENTER);
     lv_obj_add_state(ui_rollerco2settings, LV_STATE_EDITED);       /// States
     lv_obj_add_flag(ui_rollerco2settings, LV_OBJ_FLAG_SCROLL_ON_FOCUS | LV_OBJ_FLAG_SCROLL_WITH_ARROW);     /// Flags
     lv_obj_set_style_text_color(ui_rollerco2settings, lv_color_hex(0x808080), LV_PART_MAIN | LV_STATE_DEFAULT);

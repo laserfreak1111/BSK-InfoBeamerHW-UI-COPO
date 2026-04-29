@@ -15,6 +15,7 @@ extern void ui_splash_screen_init(void);
 extern void ui_splash_screen_destroy(void);
 extern void ui_event_splash(lv_event_t * e);
 extern lv_obj_t * ui_splash;
+extern lv_obj_t * ui_Panel1;
 extern lv_obj_t * ui_Image3;
 extern lv_obj_t * ui_Label1;
 extern lv_obj_t * ui_Label2;

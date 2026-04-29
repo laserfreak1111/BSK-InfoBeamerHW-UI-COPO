@@ -23,12 +23,12 @@ void ui_scrload_screen_init(void)
 
     ui_Image5 = lv_img_create(ui_scrload);
     lv_img_set_src(ui_Image5, &ui_img_bg_png);
-    lv_obj_set_width(ui_Image5, LV_SIZE_CONTENT);   /// 320
+    lv_obj_set_width(ui_Image5, LV_SIZE_CONTENT);   /// 340
     lv_obj_set_height(ui_Image5, LV_SIZE_CONTENT);    /// 170
     lv_obj_set_align(ui_Image5, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_Image5, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
     lv_obj_clear_flag(ui_Image5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
-    lv_img_set_zoom(ui_Image5, 450);
+    lv_img_set_zoom(ui_Image5, 460);
     lv_obj_set_style_img_recolor(ui_Image5, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_img_recolor_opa(ui_Image5, 180, LV_PART_MAIN | LV_STATE_DEFAULT);
 
@@ -36,7 +36,7 @@ void ui_scrload_screen_init(void)
     lv_img_set_src(ui_Image4, &ui_img_bskklein_png);
     lv_obj_set_width(ui_Image4, LV_SIZE_CONTENT);   /// 110
     lv_obj_set_height(ui_Image4, LV_SIZE_CONTENT);    /// 110
-    lv_obj_set_x(ui_Image4, 5);
+    lv_obj_set_x(ui_Image4, -6);
     lv_obj_set_y(ui_Image4, -17);
     lv_obj_set_align(ui_Image4, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_Image4, LV_OBJ_FLAG_ADV_HITTEST);     /// Flags
@@ -46,7 +46,7 @@ void ui_scrload_screen_init(void)
     ui_Label5 = lv_label_create(ui_scrload);
     lv_obj_set_width(ui_Label5, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_Label5, LV_SIZE_CONTENT);    /// 1
-    lv_obj_set_x(ui_Label5, 3);
+    lv_obj_set_x(ui_Label5, -6);
     lv_obj_set_y(ui_Label5, 54);
     lv_obj_set_align(ui_Label5, LV_ALIGN_CENTER);
     lv_label_set_text(ui_Label5, "DEVICE LOCKED BY CLOUD\nBSK-NETWORKS.DE");

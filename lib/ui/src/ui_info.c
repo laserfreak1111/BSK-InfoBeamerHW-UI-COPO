@@ -22,10 +22,11 @@ void ui_info_screen_init(void)
     lv_roller_set_options(ui_rollerinfo,
                           "SERIAL: BSKWB000001\nCore-SW 1.0.1\nCore-HW BSK00150-1\nUI-HW: BSK00147-1\nUI-SW: v1.0.3\nLAN-MAC: XXXXXXXXXX\nAudioCore SW\nAudioCore HW\n< Exit",
                           LV_ROLLER_MODE_NORMAL);
-    lv_obj_set_width(ui_rollerinfo, 304);
+    lv_obj_set_width(ui_rollerinfo, 296);
     lv_obj_set_height(ui_rollerinfo, 152);
-    lv_obj_set_x(ui_rollerinfo, 0);
+    lv_obj_set_x(ui_rollerinfo, -6);
     lv_obj_set_y(ui_rollerinfo, 11);
+    lv_obj_set_align(ui_rollerinfo, LV_ALIGN_CENTER);
     lv_obj_add_state(ui_rollerinfo, LV_STATE_EDITED);       /// States
     lv_obj_add_flag(ui_rollerinfo, LV_OBJ_FLAG_SCROLL_ON_FOCUS | LV_OBJ_FLAG_SCROLL_WITH_ARROW);     /// Flags
     lv_obj_set_style_text_color(ui_rollerinfo, lv_color_hex(0x808080), LV_PART_MAIN | LV_STATE_DEFAULT);
